@@ -12,6 +12,7 @@ development:
   database: candeo_dev
   username: candeoadmin
   password: candeoadmin2014
+  base_url: http://localhost:5000
   pool: 5
 
 # Warning: The database defined as "test" will be erased and
@@ -24,6 +25,7 @@ test:
   database: candeo_test
   username: candeoadmin
   password: candeoadmin2014
+  base_url: http://localhost:5000
   pool: 5
 
 production:
@@ -33,4 +35,15 @@ production:
   database: candeo_prod
   username: candeoadmin
   password: candeoadmin2014
+  base_url: http://www.candeoapp.com
+  pool: 5
+
+staging:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: candeo_prod
+  username: candeoadmin
+  password: candeoadmin2014
+  base_url: http://stage.candeoapp.com
   pool: 5

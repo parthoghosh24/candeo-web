@@ -1,0 +1,10 @@
+<% content_for :title, "#{@content['title']}" %>
+<% content_for :head do %>
+  <meta property="og:type"   content="website" />
+  <meta property="og:url"    content="<%= "#{DATABASE_CONF['base_url']}/c/#{@content['short_id']}" %>" />
+  <meta property="og:title"  content="<%=@content['title']%>" />
+  <meta property="og:image"  content="<%=@content['bg_url']%>" />
+  <meta property="og:description"  content="<%=@content['description']%>" />
+<% end %>
+<h1>Web#content</h1>
+<p>Find me in app/views/web/content.html.erb</p>

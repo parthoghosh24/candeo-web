@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CandeoWeb</title>
+  <title><%= yield(:title) %></title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="content-language" content="en-us" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <%= content_for?(:head) ? yield(:head) : '' %>
+  <meta name="keywords" content="talent, talent discovery, media discovery, social talent platform, talent discovery app, talent media discovery, talent creation, talent create" />
+  <meta name="description" content="Candeo is a blazing fast media and talent discovery platform. Users can either quickly discover or can get fast response for the media created by them. One can create original content in the form of audio, image and text on Candeo." />
+  <meta name="author" content="Candeo"/>
+  <meta name="copyright" content="&copy; Candeo 2015" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
