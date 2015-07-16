@@ -8,10 +8,6 @@
   src:url('applause.ttf');
 }
 
-@font-face{
-  font-family: 'response';
-  src:url('response.ttf');
-}
 
 .page-title
 {
@@ -95,12 +91,6 @@
 {
   font-family: 'applause';
   content: '\e600';
-}
-
-.inspire-icon:before
-{
-  font-family: 'response';
-  content: '\e800';
 }
 
 .icon-font
