@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'freebooter';
-  src:url('<%= asset_path( "fonts/freebooter.ttf") %>');
+  src:font-url('freebooter.ttf') format("truetype");
 }
 
 @font-face{
   font-family: 'applause';
-  src:url('<%= asset_path( "fonts/applause.ttf") %>');
+  src:font-url('applause.ttf') format("truetype");
 }
 
 
 .page-title
 {
-   font-family: 'freebooter';'
+   font-family: 'freebooter';
 }
 
 .page-logo-size, .page-logo-size:hover
@@ -119,3 +119,7 @@
   font-size: 15px;
 }
 
+.thumb-down-font
+{
+  font-size:25px;
+}
