@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'freebooter';
+  src:url('freebooter.ttf');
+}
+
+@font-face{
+  font-family: 'applause';
+  src:url('applause.ttf');
+}
+
+@font-face{
+  font-family: 'response';
+  src:url('response.ttf');
+}
+
+.page-title
+{
+   font-family: 'freebooter';'
+}
+
+.page-logo-size, .page-logo-size:hover
+{
+    font-size: 50px !important;
+    color: #000;
+    text-decoration: none;
+}
+.margin-top-100
+{
+   margin-top: 100px;
+}
+
+.margin-top-50
+{
+    margin-top: 50px;
+}
+
+.margin-top-10
+{
+     margin-top: 10px;
+}
+
+.profile-img
+{
+  width: 140px !important;
+  height: 140px !important;
+}
+
+.profile-img-small
+{
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.time-ago
+{
+  color: rgb(147, 146, 146);
+}
+
+
+.video-dimen
+{
+  width: 100%;
+  height: auto;
+}
+
+.content-holder
+{
+  position: absolute;
+  width: 40%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+    .content-holder
+    {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .user-stats
+    {
+      width:80%;
+      margin:0 auto !important;
+    }
+}
+
+.applause-icon:before
+{
+  font-family: 'applause';
+  content: '\e600';
+}
+
+.inspire-icon:before
+{
+  font-family: 'response';
+  content: '\e800';
+}
+
+.icon-font
+{
+  font-size: 25px;
+}
+
+.content-icon-font
+{
+  font-size: 20px !important;
+}
+
+.margin-bottom-25
+{
+  margin-bottom: 25px;
+}
+
+.user-stats
+{
+  width:40%;
+  margin:0 auto !important;
+}
+
+.user-stats-font
+{
+  font-size: 15px;
+}
+

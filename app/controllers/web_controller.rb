@@ -11,8 +11,10 @@ class WebController < ApplicationController
     @user = JSON.parse(user_api.body)
     puts @user
      id =@user["user"]["id"]
+     @user=@user["user"]
     showcases_api=HTTParty.get("#{DATABASE_CONF['base_url']}/api/v1/web/users/#{id}/showcases")
     @user_showcases = JSON.parse(showcases_api.body)
+    @user_showcases = @user_showcases["showcases"]
     puts @user_showcases
 
   end

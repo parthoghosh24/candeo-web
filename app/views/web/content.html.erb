@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'content', 'data-turbolinks-track' => true %>
 <% content_for :title, "#{@content['title']}" %>
 <% content_for :head do %>
   <meta property="og:type"   content="website" />
@@ -6,5 +7,99 @@
   <meta property="og:image"  content="<%=@content['bg_url']%>" />
   <meta property="og:description"  content="<%=@content['description']%>" />
 <% end %>
-<h1>Web#content</h1>
-<p>Find me in app/views/web/content.html.erb</p>
+<input type="hidden" id="content_id" name="content_id" value="<%=@content['short_id']%>">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+
+    <p class="page-title text-center"><a href="/" class="page-logo-size">Candeo</a></p>
+
+  </div>
+</nav>
+
+<div class="container margin-top-100">
+  <div class="row">
+      <div class="content-holder">
+          <article class="white-panel">
+          <div class="col-sm-7">
+              <%if @content['media_type']==0%>
+                  <img  src="<%=@content['bg_url']%>" alt="">
+              <%end%>
+              <%if @content['media_type']==1%>
+                    <img src="<%=@content['bg_url']%>" alt="">
+                    <p><audio controls><source src="<%=@content['media_url']%>" type="audio/mpeg">Your browser does not support the audio element.</audio></p>
+              <%end%>
+              <%if @content['media_type']==2%>
+                    <video class="video-dimen" loop="true" controls><source src="<%=@content['media_url']%>" type="video/mp4">Your browser does not support the video element.</video>
+              <%end%>
+              <%if @content['media_type']==3%>
+                  <img src="<%=@content['media_url']%>" alt="">
+              <%end%>
+          </div>
+          <div class="col-sm-5">
+              <div class="row">
+                  <div class="col-xs-6">
+                      <p><a href="/u/<%=@content["web_user_name"]%>"><img src="<%=@content['user_avatar_url']%>" alt="<%=@content['user_name']%>" class="img-circle profile-img-small"></a></p>
+                      <p><%=@content['user_name']%></p>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                      <p class="margin-bottom-25">
+                        <%if @content['media_type']==0%>
+                                <i class="fa fa-pencil content-icon-font"></i>
+                        <%end%>
+                        <%if @content['media_type']==1%>
+                              <i class="fa fa-music content-icon-font"></i>
+                        <%end%>
+                        <%if @content['media_type']==2%>
+                              <i class="fa fa-film content-icon-font"></i>
+                        <%end%>
+                        <%if @content['media_type']==3%>
+                            <i class="fa fa-camera content-icon-font"></i>
+                        <%end%>
+                      </p>
+                      <p><span class="time-ago"><%=time_ago_in_words(@content["created_at"].to_time)%> ago </span></p>
+                  </div>
+              </div>
+
+              <div class="row">
+                 <div class="col-xs-12">
+                    <h3><%=@content['title']%></h3>
+                    <p class="time-ago"><%=@content['description']%></p>
+                 </div>
+              </div>
+
+              <div class="row margin-top-50">
+
+                  <div class="col-xs-12">
+                      <div class="col-xs-4">
+                     <div class="row">
+                        <span class="applause-icon icon-font"></span>
+                     </div>
+                     <div class="row">
+                        <%=@content['appreciate_count']%>
+                     </div>
+                  </div>
+                  <div class="col-xs-4">
+                      <div class="row">
+                          <i class="fa fa-thumbs-o-down icon-font"></i>
+                      </div>
+                      <div class="row margin-top-10">
+                          <span><%=@content['skip_count']%></span>
+                      </div>
+                  </div>
+                  <div class="col-xs-4">
+                      <div class="row">
+                           <span class="inspire-icon icon-font"></span>
+                      </div>
+                      <div class="row">
+                          <%=@content['inspired_count']%>
+                      </div>
+                  </div>
+                  </div>
+
+              </div>
+
+          </div>
+      </article>
+      </div>
+  </div>
+</div>
