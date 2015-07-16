@@ -2,7 +2,7 @@
 <% content_for :title, "#{@user['name']} at Candeo" %>
 <% content_for :head do %>
   <meta property="og:type"   content="website" />
-  <meta property="og:url"    content="<%= "#{DATABASE_CONF['base_url']}/c/#{@user['username']}" %>" />
+  <meta property="og:url"    content="<%= "#{DATABASE_CONF['base_url']}/u/#{@user['username']}" %>" />
   <meta property="og:title"  content="<%=@user['name']%> at Candeo" />
   <meta property="og:image"  content="<%=@user['avatar_path']%>" />
   <meta property="og:description"  content="<%=@user['about']%>" />
