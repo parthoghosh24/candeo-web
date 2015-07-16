@@ -85,7 +85,11 @@
 
        <article class="white-panel">
           <a href="/c/<%=showcase['short_id']%>">
-            <img src="<%=showcase['bg_url']%>" alt="">
+             <%if showcase['media_type']==3%>
+                  <img src="<%=showcase['media_url']%>" alt="<%=showcase['title']%>">
+             <%else%>
+                  <img src="<%=showcase['bg_url']%>" alt="<%=showcase['title']%>">
+             <%end%>
           </a>
 
           <div class="col-xs-7">
