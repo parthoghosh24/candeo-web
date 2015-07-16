@@ -23,4 +23,6 @@ class WebController < ApplicationController
     @content=JSON.parse(content_api.body)
     puts @content
   end
+
+
 end
