@@ -1,5 +1,6 @@
 class WebController < ApplicationController
-  def home
+
+  def home #need to add checks to handle server errors
     performances_api = HTTParty.get("#{DATABASE_CONF['base_url']}/api/v1/web/performances")
     @performances = JSON.parse(performances_api.body)
     @performances=@performances["performances"]
@@ -15,7 +16,7 @@ class WebController < ApplicationController
   end
 
   #GET -/u/:username - Get user from API
-  def user
+  def user #need to add checks to handle server errors
     user_api = HTTParty.get("#{DATABASE_CONF['base_url']}/api/v1/web/users/#{params[:username]}")
     @user = JSON.parse(user_api.body)
     puts @user
