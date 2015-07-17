@@ -18,19 +18,37 @@
 
    <%if @content['media_type']==0%>
         <meta property="og:title"  content="Written Performance - <%=@content['title']%>" />
+        <meta name="twitter:title" content="Written Performance - <%=@content['title']%>">
     <%end%>
     <%if @content['media_type']==1%>
           <meta property="og:title"  content="Audio Performance - <%=@content['title']%>" />
+          <meta name="twitter:title" content="Audio Performance - <%=@content['title']%>"/>
     <%end%>
     <%if @content['media_type']==2%>
           <meta property="og:title"  content="Video Performance - <%=@content['title']%>" />
+          <meta name="twitter:title" content="Video Performance - <%=@content['title']%>"/>
     <%end%>
     <%if @content['media_type']==3%>
         <meta property="og:title"  content="Image Performance - <%=@content['title']%>" />
+        <meta name="twitter:title" content="Image Performance - <%=@content['title']%>"/>
     <%end%>
 
   <meta property="og:image"  content="<%=@content['bg_url']%>" />
-  <meta property="og:description"  content="<%=@content['description']%>" />
+  <%if !@content['description'].blank?%>
+      <meta property="og:description"  content="<%=@content['description']%>" />
+      <meta name="twitter:description" content="<%=@content['description']%>">
+  <%else%>
+      <meta property="og:description"  content="Candeo is a social network focused around talent discovery and nurturing. It behaves like a persistent online talent show where you can perform every week, voted and get ranked at the end of the week. Plus you can promote and discover new talent also and grow your network." />
+      <meta name="twitter:description" content="Candeo is a social network focused around talent discovery and nurturing. It behaves like a persistent online talent show where you can perform every week, voted and get ranked at the end of the week. Plus you can promote and discover new talent also and grow your network.">
+  <%end%>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@candeo2015">
+    <meta name="twitter:creator" content="@candeo2015">
+
+
+    <meta name="twitter:image" content="<%=@content['bg_url']%>">
+
 <% end %>
 <input type="hidden" id="content_id" name="content_id" value="<%=@content['short_id']%>">
 <nav class="navbar navbar-default navbar-fixed-top">

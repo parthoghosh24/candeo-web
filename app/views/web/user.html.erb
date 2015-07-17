@@ -6,6 +6,13 @@
   <meta property="og:title"  content="<%=@user['name']%> at Candeo" />
   <meta property="og:image"  content="<%=@user['avatar_path']%>" />
   <meta property="og:description"  content="<%=@user['about']%>" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@candeo2015">
+  <meta name="twitter:creator" content="@candeo2015">
+  <meta name="twitter:title" content="<%=@user['name']%> at Candeo">
+  <meta name="twitter:description"  content="<%=@user['about']%>">
+  <meta name="twitter:image" content="<%=@user['avatar_path']%>">
 <% end %>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
