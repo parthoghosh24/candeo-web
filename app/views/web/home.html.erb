@@ -1,2 +1,81 @@
-<h1>Web#home</h1>
-<p>Hola!</p>
+<% content_for :title, "Candeo - Discovery flourishes talent! Weekly create, promote and share your talent wtih the world! Discover new talent too. " %>
+<% content_for :head do %>
+    <meta property="og:type"   content="website" />
+    <meta property="og:url"    content="<%= "#{DATABASE_CONF['base_url']}" %>" />
+    <meta property="og:title"  content="Candeo - Discovery flourishes talent! Weekly create, promote and share your talent wtih the world! Discover new talent too." />
+    <meta property="og:image"  content="<%=image_path('screens/screen.png')%>" />
+    <meta property="og:description"  content="Candeo is a social network focused around talent discovery and nurturing. It behaves like a persistent online talent show where you can perform every week, voted and get ranked at the end of the week. Plus you can promote and discover new talent also and grow your network." />
+ <%end%>
+
+ <nav role="navigation" class="navbar navbar-default navbar-static-top home-nav-bar">
+  <div class="container">
+
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#navbar">
+
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class="navbar-brand page-title home-logo" href="/">
+                Candeo
+            </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right home-nav-sub">
+                <li><a class="home-nav-sub-item" href="#">ABOUT</a></li>
+                <li><a class="home-nav-sub-item" href="/privacy">PRIVACY</a></li>
+                <li><a class="home-nav-sub-item" href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+  </div>
+</nav>
+<div class="container">
+  <div class="row home-content">
+      <div class="col-sm-6">
+          <h1 class="home-bold-text">Discovery flourishes<br>Talent!</h1>
+          <p class="home-sub-text">
+            Candeo is a social talent discovery platform which behaves like a persistent online talent show.
+            <br><br>
+            Weekly create, showcase, get voted and ranked to make the world a better place with your talent.
+            <br><br>
+            Get your very own fanbase or cheer for someone whom you liked.
+            <br><br>
+            Discover and communicate with your fans or your co-promoters while celebrating talent.
+          </p>
+          <p class="margin-top-10 text-center">
+            <a href="https://play.google.com/store/apps/details?id=com.candeo.app"><%=image_tag('screens/google_play.png', alt:"Candeo App", class:"google-play")%></a>
+          </p>
+      </div>
+      <div class="col-sm-6 carousel-home">
+            <div class="carousel-slide padding-top-25" data-ride="carousel" data-interval="5000">
+              <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <%=image_tag('screens/screen_1_sm.png', alt:"screen1", class:"img-responsive carousel-img")%>
+                  </div>
+                  <div class="item">
+                    <%=image_tag('screens/screen_2_sm.png', alt:"screen2", class:"img-responsive carousel-img")%>
+                  </div>
+                  <div class="item">
+                    <%=image_tag('screens/screen_3_sm.png', alt:"screen3", class:"img-responsive carousel-img")%>
+                  </div>
+                  <div class="item">
+                    <%=image_tag('screens/screen_4_sm.png', alt:"screen4", class:"img-responsive carousel-img")%>
+                  </div>
+              </div>
+            </div>
+      </div>
+  </div>
+
+</div>
+<foote class="text-center">
+  <nav>
+    <a href="/">Home</a>
+    <a href="/terms">Terms</a>
+  </nav>
+</footer>

@@ -1,9 +1,34 @@
 <%= javascript_include_tag 'content', 'data-turbolinks-track' => true %>
-<% content_for :title, "#{@content['title']}" %>
+              <%if @content['media_type']==0%>
+                  <% content_for :title, "Written Performance-#{@content['title']}" %>
+              <%end%>
+              <%if @content['media_type']==1%>
+                    <% content_for :title, "Audio Performance-#{@content['title']}" %>
+              <%end%>
+              <%if @content['media_type']==2%>
+                    <% content_for :title, "Video Performance-#{@content['title']}" %>
+              <%end%>
+              <%if @content['media_type']==3%>
+                  <% content_for :title, "Image Performance-#{@content['title']}" %>
+              <%end%>
+
 <% content_for :head do %>
   <meta property="og:type"   content="website" />
   <meta property="og:url"    content="<%= "#{DATABASE_CONF['base_url']}/c/#{@content['short_id']}" %>" />
-  <meta property="og:title"  content="<%=@content['title']%>" />
+
+   <%if @content['media_type']==0%>
+        <meta property="og:title"  content="Written Performance - <%=@content['title']%>" />
+    <%end%>
+    <%if @content['media_type']==1%>
+          <meta property="og:title"  content="Audio Performance - <%=@content['title']%>" />
+    <%end%>
+    <%if @content['media_type']==2%>
+          <meta property="og:title"  content="Video Performance - <%=@content['title']%>" />
+    <%end%>
+    <%if @content['media_type']==3%>
+        <meta property="og:title"  content="Image Performance - <%=@content['title']%>" />
+    <%end%>
+
   <meta property="og:image"  content="<%=@content['bg_url']%>" />
   <meta property="og:description"  content="<%=@content['description']%>" />
 <% end %>
