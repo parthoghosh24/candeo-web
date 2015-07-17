@@ -11,6 +11,9 @@ class WebController < ApplicationController
   def privacy
   end
 
+  def contact
+  end
+
   #GET -/u/:username - Get user from API
   def user
     user_api = HTTParty.get("#{DATABASE_CONF['base_url']}/api/v1/web/users/#{params[:username]}")
