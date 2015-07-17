@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'user', 'data-turbolinks-track' => true %>
 <% content_for :title, "Candeo - Discovery flourishes talent! Weekly create, promote and share your talent wtih the world! Discover new talent too. " %>
 <% content_for :head do %>
     <meta property="og:type"   content="website" />
@@ -70,6 +71,78 @@
               </div>
             </div>
       </div>
+  </div>
+
+  <div class="row text-center">
+
+     <h2 class="home-bold-text">Top Performances</h2>
+
+     <section id="pinBoot">
+
+    <%@performances.each do |showcase|%>
+
+       <article class="white-panel">
+          <a href="/c/<%=showcase['short_id']%>">
+             <%if showcase['media_type']==3%>
+                  <img src="<%=showcase['media_url']%>" alt="<%=showcase['title']%>">
+             <%else%>
+                  <img src="<%=showcase['bg_url']%>" alt="<%=showcase['title']%>">
+             <%end%>
+          </a>
+
+          <div class="col-xs-7">
+            <strong><a href="/c/<%=showcase['short_id']%>"><%=showcase['title']%></a></strong>
+          </div>
+          <div class="col-xs-5 text-right">
+              <span class="time-ago"><%=showcase["created_at_text"]%></span>
+          </div>
+          <p class="margin-top-50">
+
+          <div class="col-xs-7">
+              <div class="col-xs-3">
+                     <div class="row">
+                        <span class="applause-icon user-stats-font"></span>
+                     </div>
+                     <div class="row">
+                        <%=showcase['appreciation_count']%>
+                     </div>
+                  </div>
+                  <div class="col-xs-3">
+                      <div class="row">
+                           <i class="icon-cloud-sun-inv user-stats-font"></i>
+                      </div>
+                      <div class="row">
+                          <%=showcase['inspiration_count']%>
+                      </div>
+                  </div>
+
+          </div>
+
+          <div class="col-xs-5 text-right">
+              <%if showcase['media_type']==0%>
+                                <i class="fa fa-pencil content-icon-font"></i>
+                        <%end%>
+                        <%if showcase['media_type']==1%>
+                              <i class="fa fa-music content-icon-font"></i>
+                        <%end%>
+                        <%if showcase['media_type']==2%>
+                              <i class="fa fa-film content-icon-font"></i>
+                        <%end%>
+                        <%if showcase['media_type']==3%>
+                            <i class="fa fa-camera content-icon-font"></i>
+                        <%end%>
+          </div>
+
+          </p>
+
+
+      </article>
+
+    <%end%>
+
+
+    </section>
+
   </div>
 
 </div>

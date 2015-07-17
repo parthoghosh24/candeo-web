@@ -1,5 +1,8 @@
 class WebController < ApplicationController
   def home
+    performances_api = HTTParty.get("#{DATABASE_CONF['base_url']}/api/v1/web/performances")
+    @performances = JSON.parse(performances_api.body)
+    @performances=@performances["performances"]
   end
 
   def terms
