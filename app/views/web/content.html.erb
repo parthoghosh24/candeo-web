@@ -63,7 +63,7 @@
   <div class="row">
       <div class="content-holder">
           <article class="white-panel">
-          <div class="col-sm-7">
+          <div class="col-sm-7 margin-bottom-10">
               <%if @content['media_type']==0%>
                   <img  src="<%=@content['bg_url']%>" alt="">
               <%end%>
@@ -113,28 +113,35 @@
               <div class="row margin-top-50">
 
                   <div class="col-xs-12">
-                      <div class="col-xs-4">
+                      <div class="col-xs-3">
                      <div class="row">
-                        <span class="applause-icon icon-font"></span>
+                        <a class="cta-a" href="https://play.google.com/store/apps/details?id=com.candeo.app"><span class="applause-icon icon-font"></span></a>
                      </div>
                      <div class="row">
-                        <%=@content['appreciate_count']%>
+                        <a class="cta-a" href="https://play.google.com/store/apps/details?id=com.candeo.app"><%=@content['appreciate_count']%></a>
                      </div>
                   </div>
-                  <div class="col-xs-4">
+                  <div class="col-xs-3">
                       <div class="row">
-                          <i class="fa fa-thumbs-o-down thumb-down-font"></i>
+                          <a class="cta-a" href="https://play.google.com/store/apps/details?id=com.candeo.app"><i class="fa fa-thumbs-o-down thumb-down-font"></i></a>
                       </div>
                       <div class="row margin-top-10">
-                          <span><%=@content['skip_count']%></span>
+                          <a class="cta-a" href="https://play.google.com/store/apps/details?id=com.candeo.app"><span><%=@content['skip_count']%></span></a>
                       </div>
                   </div>
-                  <div class="col-xs-4">
+                  <div class="col-xs-3">
+                      <div class="row margin-top-inv-10">
+                           <a class="cta-a" href="https://play.google.com/store/apps/details?id=com.candeo.app"><span class="icon-cloud-sun-inv icon-font"></span></a>
+                      </div>
+                      <div class="row margin-top-10">
+                          <a class="cta-a" href="https://play.google.com/store/apps/details?id=com.candeo.app"><%=@content['inspired_count']%></a>
+                      </div>
+                  </div>
+                  <div class="col-xs-3">
                       <div class="row">
-                           <span class="icon-cloud-sun-inv icon-font"></span>
+                           <a class="cta-a" href="https://play.google.com/store/apps/details?id=com.candeo.app"><i class="fa fa-download thumb-down-font"></i></a>
                       </div>
                       <div class="row">
-                          <%=@content['inspired_count']%>
                       </div>
                   </div>
                   </div>

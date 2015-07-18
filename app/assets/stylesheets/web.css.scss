@@ -113,6 +113,21 @@
      margin-top: 10px;
 }
 
+.margin-top-inv-10
+{
+       margin-top: -10px;
+}
+
+.margin-bottom-10
+{
+     margin-bottom: 10px;
+}
+
+.margin-left-10
+{
+     margin-left: 10px;
+}
+
 .profile-img
 {
   width: 140px !important;
@@ -222,4 +237,10 @@
    border-bottom:0;
    margin-bottom:0;
    min-height: 115px;
+}
+
+.cta-a,.cta-a:hover
+{
+   color:#000;
+   text-decoration:none;
 }
